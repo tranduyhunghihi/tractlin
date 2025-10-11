@@ -84,7 +84,7 @@ setTimeout(() => {
   })
   Object.assign(box_message.style, {
       display: 'none'
-})
+},3000)
 const logoHeight = logo.offsetHeight;
 const font = parseFloat(getComputedStyle(logo).fontSize);
 
@@ -150,14 +150,33 @@ document.onscroll = function() {
   }
 
 }
-
-
-
 },3900);
 
+// khong cho scroll trong 4s dau tien
 
 
+//sau 4s cho phep zoom tro lai
+setTimeout(() => {
+  const meta = document.getElementById('vp');
+  meta.setAttribute('content','width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes');
+},4000)
 
+//chan thao tac zoom tren desktop
+
+const preventZoom = (e) => {
+  if(e.ctrlKey) e.preventDefault();
+};
+const preventKeyZoom = (e) => {
+  if(e.ctrlKey && ['+', '-', '0'].includes(e.key)) e.preventDefault();
+};
+
+window.addEventListener('wheel', preventZoom, {passive: false});
+window.addEventListener('keydown', preventKeyZoom);
+
+setTimeout(() => {
+  window.removeEventListener('wheel', preventZoom);
+  window.removeEventListener('keydown', preventKeyZoom);  
+},4000);
 
 
 
