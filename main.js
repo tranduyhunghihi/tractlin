@@ -83,7 +83,7 @@ setTimeout(() => {
         animation:  "Logoapear ease-in-out  0.2s forwards"
   })
   Object.assign(box_message.style, {
-    display: 'none'
+      display: 'none'
 })
 const logoHeight = logo.offsetHeight;
 const font = parseFloat(getComputedStyle(logo).fontSize);

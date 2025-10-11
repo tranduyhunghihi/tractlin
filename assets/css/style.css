@@ -39,13 +39,14 @@ h1{
     right: -174px;
 }
 .box-message::after{
-    content: '';
+  content: '';
     position: absolute;
     display: block;
-    width: 100%;
-    height: 100%;
+    width: 370px;
+    height: 100px;
     background-color: #81d2e6;
-    top: 0;
+    top: -28px;
+    right: -180px;
     animation: appear ease-out 0.4s forwards;
 }
 .message-first{
