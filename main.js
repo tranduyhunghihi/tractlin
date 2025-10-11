@@ -59,6 +59,13 @@ after.onmouseleave = function(){
   contact.style.pointerEvents = 'auto';
 }
 
+document.body.style.overflowY = 'hidden'
+
+setTimeout(()=>{
+document.body.style.overflowY = 'auto'
+
+},4000)
+
 
 setTimeout(() => {
   Object.assign(message.style, {
@@ -66,7 +73,6 @@ setTimeout(() => {
     animation:  "Sideup ease-in-out  0.6s forwards"
     
   })
-
 },1000)
 
 
@@ -147,7 +153,6 @@ document.onscroll = function() {
 
 
 },3900);
-
 
 
 
