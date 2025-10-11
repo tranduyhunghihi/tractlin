@@ -3,6 +3,7 @@ const $$ = document.querySelectorAll.bind(document);
 
 const logo = $('.logo');
 const message = $('.message');
+const box_message = $('.box-message');
 const logo_img = $('.logo-img');
 const archive = $('.archive');
 const info_imgs = $$('.info-img');
@@ -68,7 +69,7 @@ document.body.style.overflowY = 'auto'
 
 
 setTimeout(() => {
-  Object.assign(message.style, {
+  Object.assign(box_message.style, {
     display: 'block',
     animation:  "Sideup ease-in-out  0.6s forwards"
     
@@ -81,7 +82,7 @@ setTimeout(() => {
         display: 'block',
         animation:  "Logoapear ease-in-out  0.2s forwards"
   })
-  Object.assign(message.style, {
+  Object.assign(box_message.style, {
     display: 'none'
 })
 const logoHeight = logo.offsetHeight;

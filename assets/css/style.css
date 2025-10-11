@@ -26,17 +26,19 @@ body{
 h1{
     margin: 0;
 }
-.message{
+.box-message{
     position: absolute;
-    font-size: 50px;
-    font-weight: bold;
-    color: #fbfadd;
-    font-style: italic;
-    align-items: center;
-    justify-content: center;
     display: none;
 }
-.message::after{
+.message{
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    top: -24px;
+    right: -174px;
+}
+.box-message::after{
     content: '';
     position: absolute;
     display: block;
@@ -45,6 +47,31 @@ h1{
     background-color: #81d2e6;
     top: 0;
     animation: appear ease-out 0.4s forwards;
+}
+.message-first{
+    display: flex;
+    margin-right: 30px;
+    position: relative;
+    top: 16px;
+}
+.message-last{
+    display: flex;
+}
+.c{
+    position: relative;
+    top: 30px;
+}
+.h{
+    position: relative;
+    top: 6px;
+}
+.o{
+    position: relative;
+    top: 30px;
+}
+.exclamation-mark{
+    position: relative;
+    top: 6px;
 }
 .logo{
     display: none;
