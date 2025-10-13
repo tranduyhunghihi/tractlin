@@ -1,0 +1,152 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    font-family: 'Cormorant Garamond', sans-serif;
+}   
+body{
+    background-color: #81d2e6;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease  ;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 90px;
+    justify-content: center;
+    align-items: center;
+    
+}
+.logo{
+    align-items: center;
+    justify-content: center;   
+    margin: 0 auto;
+    z-index: 10000;
+}
+.logo-img{
+    width: 36px;
+    height: 47px;
+    fill: #443e37;
+    margin: 0 auto;
+    transition: color 0.3s ease;
+    margin-top: 34px;
+}
+.body{
+    width: 100%;
+}
+.archive{
+    color: #443e37;
+    display: flex;
+    transition: all 0.1s ease;
+    margin: 8px 22px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    
+}
+.archive-first{
+    margin-right: 40px;
+}
+.archive svg path {
+    fill: currentColor;
+}
+.comma{
+    transform: translateY(-94px);
+}
+.archive__info{
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: -86px;
+    
+}
+.archive__info-link{
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: #f9f9dd;
+    transition: all 0.4s ease;
+    border: 2px solid transparent;
+
+}
+.archive__info-link:hover{
+    border-color: #443e37;
+    color: #443e37;
+    border-radius: 5px;
+    padding: 0 2px;
+    background-color: #81d2e6;
+}
+.box-img{
+    height: 1350px;
+    margin: 139px 134px 0;
+
+}
+.img-item{
+    background-color: blueviolet;
+    height: 326px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.img-item.poster{
+    height: 225px;
+    margin: auto 0;
+    transform: translateY(71%);
+}
+.img-item.map{
+    height: 544px;
+}
+
+.footer{
+    width: 100%;
+    height: 470px;
+}
+.defaut{
+    position: relative;
+    display: block;
+}
+
+.contact{
+    text-align: end ;
+    display: block;
+    padding-top: 80px;
+    text-decoration: none;
+    color: #81d2e6;
+    font-size: 1.2rem;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 700;
+}
+.word-box{
+    width: 100%;
+    margin-left: 12px;
+}
+.get-in-touch{
+    display: flex;
+    width: 648px;
+    
+}
+
+.get{
+    margin-top: 8px;
+}
+.g{
+    transform: translateY(22px);
+}
+
+.get-in-touch .in{
+    margin: 30px 30px 0;
+}
+
+.hover{
+    display: none;
+    position: relative;
+    top: -105px;
+}
+.a{
+    transform: translateY(22px);
+}

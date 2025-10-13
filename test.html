@@ -4,13 +4,90 @@
 <meta charset="UTF-8">
 <title>Scroll Text Color</title>
 <style>
-  .tilt {
-    display: inline-block;
-    transform: rotate(-10deg)
+  body {
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
   }
+  
+  .marquee-js {
+    overflow: hidden;
+    width: 300px;   /* 👈 khung nhỏ */
+    height: 120px;
+    border: 2px solid #555;
+    border-radius: 12px;
+    background: #222;
+  }
+  
+  .inner {
+    display: flex;
+    gap: 30px;
+    will-change: transform;
+  }
+  
+  .box {
+    width: 200px;   /* 👈 dài hơn khung */
+    height: 100px;
+    border-radius: 12px;
+  }
+  
+  .red { background: #ff4b4b; }
+  .blue { background: #4b8aff; }
+  .green { background: #4bff81; }
+  .orange { background: #ffb64b; }
+  .purple { background: #9a4bff; }
+  
+
 </style>
 </head>
 <body>
-  <h1 class="tilt">HELLO</h1>
+  <div class="marquee-js" id="marquee">
+    <div class="inner" id="inner">
+      <div class="box red"></div>
+      <div class="box blue"></div>
+      <div class="box green"></div>
+      <div class="box orange"></div>
+      <div class="box purple"></div>
+    </div>
+  </div>
+  
+  
+
+<script>
+  const marquee = document.getElementById("marquee");
+const inner = document.getElementById("inner");
+inner.innerHTML += inner.innerHTML; // nhân đôi để lặp mượt
+
+let pos = 0;
+let speed = 50;        // tốc độ hiện tại (px/s)
+let targetSpeed = 50;  // tốc độ mục tiêu (hover sẽ đổi)
+let lastTime = null;
+
+function animate(time) {
+  if (!lastTime) lastTime = time;
+  const dt = (time - lastTime) / 1000;
+  lastTime = time;
+
+  // chuyển dần speed -> targetSpeed cho mượt
+  speed += (targetSpeed - speed) * 0.05; 
+
+  pos += speed * dt;
+  const totalWidth = inner.scrollWidth / 2;
+  if (pos >= totalWidth) pos -= totalWidth;
+  inner.style.transform = `translateX(${-pos}px)`;
+
+  requestAnimationFrame(animate);
+}
+requestAnimationFrame(animate);
+
+// Hover: giảm tốc độ xuống 10px/s
+marquee.addEventListener("mouseenter", () => targetSpeed = 10);
+marquee.addEventListener("mouseleave", () => targetSpeed = 200);
+
+
+</script>
 </body>
 </html>
