@@ -15,6 +15,9 @@ const body = $('body');
 const before = $('.get-in-touch');
 const after = $('.hover');
 const contact = $('.default');
+const layout = $('.layout');
+
+console.log(layout)
 
 
 info_imgs.forEach((info_img, index) =>{
@@ -60,12 +63,6 @@ after.onmouseleave = function(){
   contact.style.pointerEvents = 'auto';
 }
 
-document.body.style.overflowY = 'hidden'
-
-setTimeout(()=>{
-document.body.style.overflowY = 'auto'
-
-},4000)
 
 
 setTimeout(() => {
@@ -78,13 +75,18 @@ setTimeout(() => {
 
 
 setTimeout(() => {
+  layout.style.display = 'none';
+},3000)
+setTimeout(() => {
   Object.assign(logo.style, {
         display: 'block',
         animation:  "Logoapear ease-in-out  0.2s forwards"
   })
   Object.assign(box_message.style, {
       display: 'none'
+      
 },3000)
+
 const logoHeight = logo.offsetHeight;
 const font = parseFloat(getComputedStyle(logo).fontSize);
 
@@ -152,31 +154,6 @@ document.onscroll = function() {
 }
 },3900);
 
-// khong cho scroll trong 4s dau tien
-
-
-//sau 4s cho phep zoom tro lai
-setTimeout(() => {
-  const meta = document.getElementById('vp');
-  meta.setAttribute('content','width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes');
-},4000)
-
-//chan thao tac zoom tren desktop
-
-const preventZoom = (e) => {
-  if(e.ctrlKey) e.preventDefault();
-};
-const preventKeyZoom = (e) => {
-  if(e.ctrlKey && ['+', '-', '0'].includes(e.key)) e.preventDefault();
-};
-
-window.addEventListener('wheel', preventZoom, {passive: false});
-window.addEventListener('keydown', preventKeyZoom);
-
-setTimeout(() => {
-  window.removeEventListener('wheel', preventZoom);
-  window.removeEventListener('keydown', preventKeyZoom);  
-},4000);
 
 
 
