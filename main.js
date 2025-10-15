@@ -76,7 +76,7 @@ setTimeout(() => {
 
 setTimeout(() => {
   layout.style.display = 'none';
-},3000)
+},3900);
 setTimeout(() => {
   Object.assign(logo.style, {
         display: 'block',
@@ -85,7 +85,7 @@ setTimeout(() => {
   Object.assign(box_message.style, {
       display: 'none'
       
-},3000)
+},3900);
 
 const logoHeight = logo.offsetHeight;
 const font = parseFloat(getComputedStyle(logo).fontSize);
