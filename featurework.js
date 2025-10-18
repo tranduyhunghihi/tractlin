@@ -8,7 +8,9 @@ const contact = $('.default');
 const text1 = $('.text1');
 const text2 = $('.text2');
 const slider = $('.slider');
-const track = $('.track');
+const track1 = $('.track');
+const track2 = track1.cloneNode(true);
+
 
 
 
@@ -31,29 +33,47 @@ document.onscroll = function(){
     }
 }
 //tao cuon hinh anh vo han
+
+
+slider.appendChild(track2);
+
 let baseSpeed = 0.5;
 let currentSpeed = baseSpeed;
-let position = 0;
-track.innerHTML += track.innerHTML;
 
+let pos1 = 0;
+// ⚡ trừ thêm khoảng cách giữa 2 track đúng bằng gap trong CSS
+let pos2 = -(track1.scrollWidth + 40); 
 
 function loop() {
-    position += currentSpeed;
-    if(position >= track.scrollWidth){
-        position = 0;
-    }
-    track.style.transform = `translateX(${position}px)`;
-    requestAnimationFrame(loop);
-} 
+  pos1 -= currentSpeed;
+  pos2 -= currentSpeed;
+
+  // Nếu track1 chạy hết → đưa ra sau track2
+  if (pos1 <= -(track1.scrollWidth + 40)) {
+    pos1 = pos2 + track2.scrollWidth + 40;
+  }
+
+  // Nếu track2 chạy hết → đưa ra sau track1
+  if (pos2 <= -(track2.scrollWidth + 40)) {
+    pos2 = pos1 + track1.scrollWidth + 40;
+  }
+
+  track1.style.transform = `translate3d(${pos1}px, 0, 0)`;
+  track2.style.transform = `translate3d(${pos2}px, 0, 0)`;
+
+  requestAnimationFrame(loop);
+}
 
 loop();
 
-slider.addEventListener('mouseenter', () => {
-    currentSpeed = baseSpeed*0.25;
+// Hover chậm lại
+slider.addEventListener("mouseenter", () => {
+  currentSpeed = baseSpeed * 0.25;
 });
-slider.addEventListener('mouseleave', () => {
-    currentSpeed = baseSpeed;
+slider.addEventListener("mouseleave", () => {
+  currentSpeed = baseSpeed;
 });
+
 
 
 before.onmouseenter = function(){
