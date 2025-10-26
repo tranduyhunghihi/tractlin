@@ -194,12 +194,120 @@ opacity: 0.8;
     transform: rotate(90deg);
 }
 .content-4{
-    height: 666px;
+    height: 500px;
     width: 100%;
+    margin-bottom: 30px;
 }
 .pic-before,
 .pic-after{
     height: 502px;
     background-size: cover;
     background-position: center;
+}
+.content-5{
+    width: 100%;
+    height: 960px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.large-img{
+    height: 914px;
+    width: 1473px;
+    background-size: cover;
+    background-position: center;
+}
+.content-6{
+    width: 100%;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.small-img{
+    width: 320px;
+    height: 424px;
+    background-size: cover;
+    background-position: center;
+}
+.content-7{
+    width: 100%;
+    height: 864px;
+    background-color: #f05824;
+    position: relative;
+
+}
+.book-img{
+    width: 680px;
+    height: 490px;
+    position: absolute;
+    text-align: center;
+    inset: 0;
+    margin: auto;
+}
+.img-1{
+    background-color: #81d2e6;
+    z-index: 1;
+}
+.img-2{
+    background-color: aliceblue;
+    z-index: 2;
+    transform: rotate(6deg);
+}
+.img-3{
+    background-color: antiquewhite;
+    z-index: 3;
+    transform: rotate(-5deg);
+}
+.img-4{
+    background-color: bisque;
+    z-index: 4;
+    transform: rotate(10deg);
+}
+.img-5{
+    background-color: blueviolet;
+    z-index: 5;
+    transform: rotate(-10deg);
+}
+.img-6{
+    background-color: cadetblue;
+    z-index: 6;
+    transform: translateX(10px);
+}
+.img-7{
+    background-color: chartreuse;
+    z-index: 7 ;
+    transform: rotate(-6deg);
+}
+.img-8{
+    background-color: cornflowerblue;
+    z-index: 8;
+    transform: rotate(3deg);
+}
+.img-9{
+    background-color: darkorchid;
+    z-index: 9;
+    transform: rotate(-13deg);
+}
+.img-10{
+    background-color: lightslategray;
+    z-index: 10;
+    transform: translate(10px, -10px);
+}
+
+.display{
+    display: none;
+}
+.content-8{
+    width: 100%;
+    height: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.xebandua{
+    width: 548px;
+    height: 282px;
+    background-position: center;
+    background-size: cover;
 }
