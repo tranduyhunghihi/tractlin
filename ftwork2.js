@@ -62,3 +62,12 @@ function showImg(){
     },time)
 }
 showImg();
+
+
+
+
+//demo vid
+const container = $('.container');
+setInterval(() => {
+    container.classList.toggle('change_color');
+},200);

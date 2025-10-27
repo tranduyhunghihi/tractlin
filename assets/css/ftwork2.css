@@ -235,7 +235,7 @@ opacity: 0.8;
     height: 864px;
     background-color: #f05824;
     position: relative;
-
+    margin-top: 20px;
 }
 .book-img{
     width: 680px;
@@ -310,4 +310,68 @@ opacity: 0.8;
     height: 282px;
     background-position: center;
     background-size: cover;
+}
+
+.content-9{
+    width: 100%;
+    height: 648px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.container{
+    width: 864px;
+    height: 586px;
+    background-color: darkmagenta;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.non{
+    width: 242px;
+    height: 242px;
+    background-color: #81d2e6;
+    position: absolute;
+    bottom: -14px;
+    right: -80px;
+}
+.can{
+    width: 220px;
+    height: 290px;
+    background-color: aqua;
+    position: absolute;
+    top: -34px;
+    left: -190px;
+    transform: rotate(10deg);
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+.sach{
+    display: flex;
+    transform: translateY(180px);
+}
+.bia_1,
+.bia_2{
+    width: 212px;
+    height: 298px;
+    background-color: orange;
+}
+.bia_1{
+    margin-right: 66px ;
+}
+.gaysach{
+    width: 58px;
+    height: 492px;
+    background-color: bisque;
+    transform: rotate(-90deg);
+}
+.container.change_color{
+    background-color: chocolate;
 }
