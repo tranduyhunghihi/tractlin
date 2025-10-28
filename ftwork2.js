@@ -4,6 +4,9 @@ const $$ = document.querySelectorAll.bind(document);
 const header = $('.header');
 const logo = $('.logo');
 const imgs = $$('.book-img');
+const before = $('.get-in-touch');
+const after = $('.hover');
+const contact = $('.default');
 let index = 1;
 const time = 300;
 
@@ -64,10 +67,22 @@ function showImg(){
 showImg();
 
 
-
-
 //demo vid
 const container = $('.container');
 setInterval(() => {
     container.classList.toggle('change_color');
 },200);
+
+before.onmouseenter = function(){
+    console.log('hihi');
+    contact.style.opacity = '0';
+    contact.style.pointerEvents = '0';
+    after.style.display = 'block';
+    
+  }
+  after.onmouseleave = function(){
+    console.log('haha');
+    after.style.display = 'none';
+    contact.style.opacity = '1';
+    contact.style.pointerEvents = 'auto';
+  }
