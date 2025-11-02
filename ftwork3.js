@@ -51,7 +51,7 @@ before.onmouseenter = function(){
 
 slider.appendChild(track2);
 
-let baseSpeed = 0.5;
+let baseSpeed = 0.75;
 let currentSpeed = baseSpeed;
 
 let pos1 = 0;
@@ -61,11 +61,11 @@ function loop(){
     pos1 += currentSpeed;
     pos2 += currentSpeed;
 
-    if(pos1 <= -(track1.scrollWidth + 10)){
-        pos1 = pos2 + track2.scrollWidth + 10;
+    if(pos1 >= (track1.scrollWidth + 10)){
+        pos1 = pos2 - track1.scrollWidth - 10;
     }
-    if(pos2 <= -(track2.scrollWidth + 10)){
-        pos2 = pos1 + track1.scrollWidth + 10;
+    if(pos2 >= (track2.scrollWidth + 10)){
+        pos2 = pos1 - track2.scrollWidth - 10;
     }
 
     track1.style.transform = `translate3d(${pos1}px, 0, 0)`;
