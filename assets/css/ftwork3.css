@@ -247,13 +247,8 @@ opacity: 0.8;
     display: block;
     width: 254px;
     height: 361px;
-    background-color: blueviolet;
-    overflow: hidden;
-    flex-shrink: 0;
-    position: relative;
-    font-size: 3rem;
-    text-align: center;
-    text-decoration: none;
+    background-position: center;
+    background-size: cover;
 
 }
 .content-4{
@@ -262,7 +257,8 @@ opacity: 0.8;
 }
 .item{
     height: 221px;
-    background-color: chocolate;
+    background-position: center;
+    background-size: cover;
 }
 .content-5{
     width: 100%;
@@ -270,12 +266,14 @@ opacity: 0.8;
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 .book-img{
-    width: 1109px;
-    height: 423px;
+    width: 1200px;
+    height: 450px;
     position: relative;
-    background-color: cadetblue;
+    background-position: center;
+    background-size: 155%;
 }
 .deco-1,
 .deco-2,
@@ -283,22 +281,24 @@ opacity: 0.8;
 .deco-4,
 .deco-5,
 .deco-6{
-    width: 111px;
-    height: 111px;
-    background-color: blueviolet;
+    width: 120px;
+    height: 120px;
+    background-position: center;
+    background-size: cover;
     position: absolute;
 }
 .deco-1{
     top: -20px;
-    left: -90px;
+    left: -40px;
 }
 .deco-2{
-    top: -90px;
+    top: -55px;
     left: 60%;
 }
 .deco-3{
     bottom: -111px;
-    left: -120px;
+    left: -90px;
+    width: 145px;
 }
 .deco-4{
     bottom: -20px;
@@ -306,7 +306,7 @@ opacity: 0.8;
 }
 .deco-5{
     bottom: -80px;
-    right: 0;   
+    right: 68px;   
 }
 .deco-6{
     top: 100px;
@@ -321,16 +321,19 @@ opacity: 0.8;
     align-items: center;
     margin-bottom: 50px;
 }
+.hatList,
+.hatBook{
+    background-position: center;
+    background-size: cover;
+}
 .hatList{
     width: 120px;
     height: 318px;
-    background-color: coral;
     margin-bottom: 48px;
 }
 .hatBook{
     width: 536px;
     height: 384px;
-    background-color: coral;
 }
 
 .footer{
